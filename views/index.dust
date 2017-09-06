@@ -7,16 +7,16 @@
   <body>
     <h1>{title}</h1>
 	<div class="ogaudio"
-		 data-autoplay="true"
+		 data-autoplay="false"
 		 data-audio="true"
-		 data-video="false"
+		 data-video="true"
 		 data-max-audio-lag="0.95"
 		 data-volume="1">
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.10/URI.js"></script>
   	<script type="text/javascript" src="js/jsmpeg.js"></script>
-  	<script type="text/javascript" src="js/local.js"></script>
-  	<!--script type="text/javascript" src="js/remote.js"></script-->
+  	<!-- script type="text/javascript" src="js/local.js"></script-->
+  	<script type="text/javascript" src="js/remote.js"></script>
   </body>
 </html>

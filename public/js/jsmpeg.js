@@ -46,8 +46,8 @@ JSMpeg.VideoElement = function () {
         this.container = element;
         addStyles(this.container, {display: "inline-block", position: "relative", minWidth: "80px", minHeight: "80px"});
         this.canvas = document.createElement("canvas");
-        this.canvas.width = 960;
-        this.canvas.height = 540;
+        this.canvas.width = 120;  //960
+        this.canvas.height = 120; //540
         addStyles(this.canvas, {display: "block", width: "100%"});
         this.container.appendChild(this.canvas);
         this.playButton = document.createElement("div");

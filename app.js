@@ -35,7 +35,7 @@ function normalizePort(val) {
  * Get port from environment and store in Express.
  */
 
-var STREAM_PORT = normalizePort(process.env.PORT || '8080');
+var STREAM_PORT = normalizePort(process.env.PORT || '4000');
 app.set('port', STREAM_PORT);
 
 var STREAM_SECRET = process.env.SECRET || "supersecret";

@@ -6,7 +6,7 @@ $(document).ready(function(){
         //$(".ogaudio").data("protocol", audioId);
         $(".ogaudio").get().forEach(function(element, index, array) {
                 console.log(array[index]);
-                array[index].dataset['url'] = "ws://localhost:8080/as/";
+                array[index].dataset['url'] = "ws://localhost:4000/as/";
                 array[index].dataset['protocol'] = audioId;
             }
         );
