@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{title}</h1>
+	<div class="ogaudio"
+		 data-autoplay="true"
+		 data-audio="true"
+		 data-video="false"
+		 data-max-audio-lag="0.95"
+		 data-volume="1">
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.10/URI.js"></script>
+  	<script type="text/javascript" src="js/jsmpeg.js"></script>
+  	<script type="text/javascript" src="js/local.js"></script>
+  	<!--script type="text/javascript" src="js/remote.js"></script-->
+  </body>
+</html>

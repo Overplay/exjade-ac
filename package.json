@@ -1,0 +1,19 @@
+{
+  "name": "expaudiod",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "adaro": "~1.0.4",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-ws": "^3.0.0",
+    "morgan": "~1.8.1",
+    "node-sass-middleware": "0.9.8",
+    "serve-favicon": "~2.4.2"
+  }
+}
