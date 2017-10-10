@@ -1,24 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Miracle Ear Button</title>
-    <link rel='stylesheet' href='og.css' />
-  </head>
-  <body>
-	<button class="ogaudio btn" id="playa"
-		 data-autoplay="false"
-		 data-audio="true"
-		 data-video="true"
-		 data-max-audio-lag="0.95"
-		 data-volume="1"
-		 data-url="ws://localhost:4000/as/">
-		<!-- data - url = "ws://192.168.1.172:4000/as/" > -->
-		Outer Button
-	</button>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.10/URI.js"></script>
-  	<script type="text/javascript" src="../static/jsmpegx.js"></script>
-  	<!-- script type="text/javascript" src="js/local.js"></script-->
-  	<script type="text/javascript" src="../static/remotex.js"></script>
-  </body>
+<html ng-app="ogAudioApp">
+<head>
+    <title>Miracle Ear</title>
+    <script src="../blueline/common/bower_components/angular/angular.min.js"></script>
+    <script src="../blueline/common/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../blueline/common/js/uiOGMobile/uiOGMobile.js"></script>
+    <script src="../blueline/common/js/ogAPIBL2.js"></script>
+    <script src="ogcontrol.ng.js"></script>
+    <link rel='stylesheet' href='../blueline/common/css/og.css'/>
+
+    <style>
+
+        @font-face {
+            font-family: "POPBLACK";
+            src: url('../blueline/common/fonts/Poppins/Poppins-SemiBold.ttf');
+        }
+
+        @font-face {
+            font-family: "POPREG";
+            src: url('../blueline/common/fonts/Poppins/Poppins-Medium.ttf');
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+            background-color: #404040;
+            color: white;
+            font-family: POPREG, monospace;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wide-button {
+            margin-top: 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .venue-data {
+            color: orange;
+        }
+
+        .unselectable {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .programbox {
+            margin: 10px;
+            border: 2px solid white;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body ng-controller="ogAudioCtrlr">
+<og-app-header name="Miracle Ear"></og-app-header>
+<div class="container-fluid">
+    <div class="row" ng-if="ui.showProgrammInfo">
+        <div class="programbox">
+            {{ ui.channelNumber}} : {{ ui.channelName }}<br>
+            {{ ui.title }}
+        </div>
+    </div>
+    <div class="row">
+        <button class="ogaudio btn wide-button" id="playa"
+                data-autoplay="false"
+                data-audio="true"
+                data-video="true"
+                data-max-audio-lag="0.95"
+                data-volume="1"
+                data-url="ws://localhost:4000/as/">
+            <!-- data - url = "ws://192.168.1.172:4000/as/" > -->
+        </button>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.10/URI.js"></script>
+<script type="text/javascript" src="../static/jsmpegx.js"></script>
+<!-- script type="text/javascript" src="js/local.js"></script-->
+<!--<script type="text/javascript" src="../static/remotex.js"></script>-->
+</body>
 </html>

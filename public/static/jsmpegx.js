@@ -54,12 +54,12 @@ JSMpeg.OGAudioElement = function () {
 
         this.container = element;
 
-        addStyles( this.container, {
-            display:   "inline-block",
-            position:  "relative",
-            width:     "100%",
-            minHeight: "40px"
-        } );
+        // addStyles( this.container, {
+        //     display:   "inline-block",
+        //     position:  "relative",
+        //     width:     "100%",
+        //     minHeight: "40px"
+        // } );
 
         // Not sure we need a canvas at all
         this.canvas = document.createElement( "canvas" );

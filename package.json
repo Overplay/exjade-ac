@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "adaro": "~1.0.4",
+    "bluebird": "^3.5.1",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
@@ -14,6 +15,8 @@
     "express-ws": "^3.0.0",
     "morgan": "~1.8.1",
     "node-sass-middleware": "0.9.8",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "superagent": "^3.6.3",
+    "superagent-bluebird-promise": "^4.2.0"
   }
 }

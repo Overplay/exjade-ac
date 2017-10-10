@@ -50,6 +50,7 @@ var expressWs = require('express-ws')(app, server);
 
 var index = require('./routes/index');
 var audio = require('./routes/audioserver');
+const ogproxy = require('./routes/ogproxy');
 
 // view engine setup
 app.engine('dust', adaro.dust());
@@ -78,6 +79,7 @@ app.use(function (req, res, next) {
 
 app.use('/', index);
 app.use('/as', audio);
+app.use('/bellinidm', ogproxy);
 //app.use('/control', control);
 
 // catch 404 and forward to error handler
