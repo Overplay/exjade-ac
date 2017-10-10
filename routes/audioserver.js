@@ -43,6 +43,9 @@ router.post('/:secret/:id', function(req, res, next) {
         );
     }
 
+    console.log( req.headers );
+    console.log( req.cookies );
+
     res.connection.setTimeout(0);
 
     req.on('error', function(error){
