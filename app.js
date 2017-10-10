@@ -78,6 +78,7 @@ app.use(function (req, res, next) {
 
 app.use('/', index);
 app.use('/as', audio);
+//app.use('/control', control);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
