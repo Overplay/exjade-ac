@@ -109,23 +109,23 @@ JSMpeg.OGAudioElement = function () {
         if ( this.player.audioOut && !this.player.audioOut.unlocked ) {
 
             var unlockAudioElement = this.container;
-            if ( options.autoplay || this.player.options.streaming ) {
-                this.unmuteButton = document.createElement( "div" );
-                this.unmuteButton.innerHTML = VideoElement.UNMUTE_BUTTON;
-                addStyles( this.unmuteButton, {
-                    zIndex:   2,
-                    position: "absolute",
-                    bottom:   "10px",
-                    right:    "20px",
-                    width:    "275px",
-                    height:   "75px",
-                    margin:   "auto",
-                    opacity:  "0.7",
-                    cursor:   "pointer"
-                } );
-                this.container.appendChild( this.unmuteButton );
-                unlockAudioElement = this.unmuteButton
-            }
+            // if ( options.autoplay || this.player.options.streaming ) {
+            //     this.unmuteButton = document.createElement( "div" );
+            //     this.unmuteButton.innerHTML = VideoElement.UNMUTE_BUTTON;
+            //     addStyles( this.unmuteButton, {
+            //         zIndex:   2,
+            //         position: "absolute",
+            //         bottom:   "10px",
+            //         right:    "20px",
+            //         width:    "275px",
+            //         height:   "75px",
+            //         margin:   "auto",
+            //         opacity:  "0.7",
+            //         cursor:   "pointer"
+            //     } );
+            //     this.container.appendChild( this.unmuteButton );
+            //     unlockAudioElement = this.unmuteButton
+            // }
 
             this.unlockAudioBound = this.onUnlockAudio.bind( this, unlockAudioElement );
             unlockAudioElement.addEventListener( "touchstart", this.unlockAudioBound, false );
